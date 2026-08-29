@@ -1,7 +1,6 @@
 console.log("hello jii");
 
 // Creation of Object:-
-
 // const rectangle = {
 //     length : 10,
 //     breadth : 20,
@@ -13,9 +12,7 @@ console.log("hello jii");
 // };
 
 // Factory function:-
-
 // function createRectangle(len, bre) {
-
 //    return rectangle = {
 //     length: len,
 //     breadth: bre,
@@ -30,7 +27,6 @@ console.log("hello jii");
 // let rectangleobj1= createRectangle(5, 4);
 
 // Constructor Function:-
-
 function Rectangle(len, bre) {
     this.length = len,
     this.breadth = bre,
@@ -38,7 +34,6 @@ function Rectangle(len, bre) {
         console.log('drawing');
     }
 }
-
 // Object creation using constructor function
 let rectangleObject = new Rectangle(14, 26);
 
@@ -74,13 +69,13 @@ c.value++;
 console.log(c.value);
 console.log(d.value);
 
-// // Case Second:-
-// let e = {value: 12};
-// function inc(e) {
-//     e.value;
-// }
-// inc(a);
-// console.log(e.value);
+// Case Second:-
+let e = {value: 12};
+function inc(e) {
+    e.value;
+}
+inc(e);
+console.log(e.value);
 
 // For-in Loop:-Apply on the Objects.
 let rectangle = {
@@ -95,3 +90,47 @@ for(let key in rectangle) {
 for(let key of Object.keys(rectangle)) {
     console.log(key);
 }
+
+if('length' in rectangle) {
+    console.log('Present');
+}
+else {
+    console.log('Absent')
+}
+
+// Object Cloning:- first case -> iteration method
+let src = {
+    a: 10,
+    b: 20,
+    c: 30,
+};
+let dest = {};
+for (let key in src){
+    dest[key] = src[key];
+}
+console.log(dest);
+src.a++;
+console.log(dest);
+
+// Object Cloning:- second case -> assign method
+let src1 = {
+    d: 40,
+    e: 50,
+    f: 60,
+};
+let src2 = {value:20}
+let dest1 = Object.assign({}, src1, src2);
+console.log(dest1);
+src.d++;
+console.log(dest1);
+
+// Object Cloning:- third case -> spread method
+let src3 = {
+    g: 70,
+    h: 80,
+    i: 90,
+};
+let dest3 = {...src3};
+console.log(dest3);
+src3.g++;
+console.log(dest3);
