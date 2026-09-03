@@ -101,3 +101,13 @@ function a() {        //Const Variable:-
     function b() {
         const ab = 12;
     }
+
+//Reducing an Array:-
+let arr = [1,2,3,4,5];
+let total = 0;
+for(let value of arr) 
+    total = total + value;
+console.log(total);
+//use of reduce metho-->
+let totalsum = arr.reduce((accumulator, currentvalue) => accumulator + currentvalue, 0);
+console.log(totalsum);
