@@ -155,3 +155,13 @@ console.log(mappings);
 let numbers8 = [1,2,4,-6,-8,-10];
 let mapping1 = numbers8.filter(value => value >=0).map(num => {value : num});
 console.log(mapping1);
+
+let numberv = [1, 2 , 3];
+let resultv = numberv.map(n => n*2);
+console.log(resultv);
+
+let namev = "Vaishali";
+
+namev[0] = "R";
+
+console.log(namev);

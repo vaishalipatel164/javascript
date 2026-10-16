@@ -1,24 +1,21 @@
-console.log("hello jii");
+console.log("hello jii ");
 
-// Creation of Object:-
-// const rectangle = {
+// // Creation of Object:-
+// const rectangl = {
 //     length : 10,
 //     breadth : 20,
-
 //     // Add Behaviour
 //     draw : function() {     //function or method
 //         console.log('drawing rectange');
 //     }
 // };
 
-// Factory function:-
+// // Factory function:- we create camal case notation function.
 // function createRectangle(len, bre) {
 //    return rectangle = {
 //     length: len,
 //     breadth: bre,
-
 //     // Add Behaviour
-
 //     draw() {     //function or method
 //         console.log('drawing rectange');
 //     }
@@ -34,14 +31,12 @@ function Rectangle(len, bre) {
         console.log('drawing');
     }
 }
-// Object creation using constructor function
-let rectangleObject = new Rectangle(14, 26);
+let rectangleObject = new Rectangle(14, 26);   // Object creation using constructor function.
 
-// Dynamic Nature of Object
- rectangleObject.color = 'green';       //Adding property
+// Dynamic Nature of Object:-
+rectangleObject.color = 'green';      //Adding property
 console.log(rectangleObject);
-
-delete rectangleObject.color;          //Deleting property
+delete rectangleObject.color;        //Deleting property
 console.log(rectangleObject);
 
 let Rectangle1 = new Function (
@@ -49,10 +44,10 @@ let Rectangle1 = new Function (
     `this.length = length,
     this.breadth = breadth,
     this.draw = function() {
-        console.log('drawing');
+    console.log('drawing');
     }`);
-//Object creation using Rectangle
-let rect = new Rectangle1(5, 10);
+//Object creation using Rectangle:-
+let rect = new Rectangle1(7, 9);
 console.log(rect);
 
 // Primitive Type:-
@@ -68,7 +63,6 @@ let d = c;
 c.value++;
 console.log(c.value);
 console.log(d.value);
-
 // Case Second:-
 let e = {value: 12};
 function inc(e) {
@@ -90,7 +84,6 @@ for(let key in rectangle) {
 for(let key of Object.keys(rectangle)) {
     console.log(key);
 }
-
 if('length' in rectangle) {
     console.log('Present');
 }
